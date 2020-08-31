@@ -7,6 +7,7 @@
 
 body {
   background-color: #8d93ab;
+  color:#384259;
 }
 
 .all {
@@ -41,6 +42,7 @@ nav a {
 nav a:hover {
   color: #393b44;
   background-color: #f1f3f8;
+  transition: background-color 1s ease-in;
 }
 
 ul {
@@ -55,6 +57,10 @@ ul {
 }
 
 /* main section styling */
+main h1 {
+  text-align: center;
+}
+
 main {
   grid-area: main;
   padding: 1em;
@@ -63,11 +69,13 @@ main {
   justify-content: space-evenly;
 }
 
-.card {
-    border: 1px solid red;
-    height: 400px;
-    margin: 5px
-  }
+main .card{
+  box-shadow: 0 0 20px 0 rgba(57, 59, 68, 0.4);
+  background-color: #d6e0f0;
+  padding: 1em;
+  height: 400px;
+  margin: 5px
+}
 
 /* footer styling */
 footer {
