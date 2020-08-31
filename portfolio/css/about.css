@@ -5,7 +5,14 @@
   box-sizing: 0;
 }
 
-.grid-container {
+body {
+  background-color: #8d93ab;
+}
+
+.all {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
   height: 100vh;
   display: grid;
   grid-template-areas:
@@ -14,70 +21,71 @@
     "footer footer footer";
   grid-template-rows: 60px 1fr 30px;
 }
+
 /* header styling */
-.grid-container header {
+.all header {
   grid-area: header;
-  background-color: #7ac7c4;
+  background-color: #393b44;
+  padding: 0.1em 0 1em 0;
 }
 
 nav a {
-    color: #f73859;
-    font-family:'Pacifico', cursive;
-    border: 1px solid #f73859;
-    padding: 1px 3px;
-  }
-  
-  nav a:hover {
-      color: #7ac7c4;
-      background-color: #f73859;
-  }
-  
-  ul {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-    list-style: none;
-  }
+  color: #f1f3f8;
+  font-family: "Pacifico", cursive;
+  border: 1px solid #f1f3f8;
+  padding: 1px 3px;
+  margin-bottom: 100px;
+
+}
+
+nav a:hover {
+  color: #393b44;
+  background-color: #f1f3f8;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
 
 /* main section styling */
-.grid-container main {
-  background-color: #c4edde;
+main {
   grid-area: main;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .card {
     border: 1px solid red;
-    height: 300px;
+    height: 400px;
+    margin: 5px
   }
-
-/* logo styling */
-.grid-container .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-img {
-    height: 80px;
-  }
-
-
 
 /* footer styling */
-.grid-container footer {
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    background-color: #7ac7c4;
-  }
-  
-  footer p, {
-    padding-top: 10px;
-    color: #384259;
-  }
-  
-  footer a {
-      text-decoration: none;
-  }
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+}
 
+footer p {
+  padding-top: 10px;
+  color: #f1f3f8;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: #f1f3f8;
+}
 

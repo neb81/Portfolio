@@ -5,6 +5,10 @@
   box-sizing: 0;
 }
 
+body {
+  background-color: #8d93ab;
+}
+
 .grid-container {
   max-width: 1100px;
   margin-left: auto;
@@ -86,7 +90,8 @@ main h1 {
 
 button {
   background-color: #8d93ab;
-  border: 1px solid #8d93ab;
+  border: 2px solid #384259;
+  padding: 0.1em;
 }
 
 button a {
@@ -94,12 +99,17 @@ button a {
   color: #384259;
 }
 
+button:hover, button a:hover {
+  background-color: #384259;
+  color: #8d93ab;
+  transition: background-color 2s ease-out;
+}
+
 /* footer styling */
 .grid-container footer {
   grid-area: footer;
   display: flex;
   justify-content: center;
-  background-color: #393b44;
 }
 
 footer p {
