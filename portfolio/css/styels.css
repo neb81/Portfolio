@@ -6,7 +6,7 @@
 }
 
 .grid-container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
@@ -22,19 +22,19 @@
 /* header styling */
 .grid-container header {
   grid-area: header;
-  background-color: #7ac7c4;
+  background-color: #393b44;
 }
 
 nav a {
-  color: #f73859;
+  color: #f1f3f8;
   font-family: "Pacifico", cursive;
-  border: 1px solid #f73859;
+  border: 1px solid #f1f3f8;
   padding: 1px 3px;
 }
 
 nav a:hover {
-  color: #7ac7c4;
-  background-color: #f73859;
+  color: #393b44;
+  background-color: #f1f3f8;
 }
 
 ul {
@@ -50,7 +50,7 @@ ul {
 
 /* logo styling */
 .grid-container div {
-  background-color: #c4edde;
+  background-color: #8d93ab;
   grid-area: logo;
   display: flex;
   justify-content: center;
@@ -63,7 +63,7 @@ ul {
 
 /* main section styling */
 .grid-container main {
-  background-color: #c4edde;
+  background-color: #8d93ab;
   grid-area: main;
   display: flex;
   flex-flow: column;
@@ -71,7 +71,7 @@ ul {
   align-items: center;
 }
 
-main h3,
+main h1, h2, h3,
 button {
   font-size: 28px;
   color: #384259;
@@ -85,8 +85,8 @@ main h1 {
 }
 
 button {
-  background-color: #c4edde;
-  border: 1px solid #c4edde;
+  background-color: #8d93ab;
+  border: 1px solid #8d93ab;
 }
 
 button a {
@@ -99,14 +99,18 @@ button a {
   grid-area: footer;
   display: flex;
   justify-content: center;
-  background-color: #7ac7c4;
+  background-color: #393b44;
 }
 
 footer p {
   padding-top: 10px;
-  color: #384259;
+  color: #f1f3f8;
 }
 
 footer a {
   text-decoration: none;
+}
+
+footer a:visited {
+  color: #f1f3f8;
 }
