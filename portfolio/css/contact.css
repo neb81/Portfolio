@@ -66,9 +66,21 @@ ul {
   justify-content: space-evenly;
 }
 
-.grid-container h1 {
+.grid-container  h1 {
   text-align: center;
 }
+
+.grid-container .icon {
+  text-align: center;
+  font-size: 60px;
+  color: #384259;
+}
+
+.grid-container .icon a {
+  text-decoration: none;
+  color: #384259;
+}
+
 
 /* form styling */
 .form-container {
