@@ -6,40 +6,40 @@
 }
 
 body {
-  background-color: #8d93ab;
-}
-
-.grid-container {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: rgba(91, 140, 90, 0.3);
+  color: #384259;
   height: 100vh;
   display: grid;
   grid-template-areas:
-    "header header header"
-    "logo logo logo"
-    "main main main"
-    "footer footer footer";
-  grid-template-rows: 60px 1fr 7fr 30px;
+    "header"
+    "grid-container"
+    "footer";
+  grid-template-rows: 60px 1fr 30px;
+  /* grid-template-columns: 100%; */
 }
-
 /* header styling */
-.grid-container header {
+header {
   grid-area: header;
-  background-color: #393b44;
+  background-color: rgba(91, 140, 90, 0.2);
+  padding: 0.1em 0 1em 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 20px 0 rgba(91, 140, 90, 0.5);
 }
 
 nav a {
-  color: #f1f3f8;
+  color: #384259;
   font-family: "Pacifico", cursive;
-  border: 1px solid #f1f3f8;
+  border: 0.1px solid rgba(91, 140, 90, 0.1);
   padding: 1px 3px;
+  margin-bottom: 100px;
 }
 
 nav a:hover {
   color: #393b44;
-  background-color: #f1f3f8;
-  transition: background-color 1s ease-in;
+  background-color: rgba(91, 140, 90, 0.3);
+  transition: background-color 1s ease-out;
+  box-shadow: 0 0 20px 0 rgba(91, 140, 90, 0.8);
 }
 
 ul {
@@ -53,43 +53,47 @@ ul {
   text-decoration: none;
 }
 
-/* logo styling */
-.grid-container div {
-  background-color: #8d93ab;
-  grid-area: logo;
+/* container styling */
+.grid-container {
+  grid-area: grid-container;
+  padding: 1em;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
+/* logo styling */
 .profile {
   height: 70px;
 }
 
 /* main section styling */
-.grid-container main {
-  background-color: #8d93ab;
+main h1 {
+  text-align: center;
+}
+
+main {
   grid-area: main;
+  padding: 1em;
   display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 main h1, h2, h3,
 button {
-  font-size: 28px;
-  color: #384259;
-  font-family: "Permanent Marker", cursive;
-}
-
-main h1 {
+  text-align: center;
   font-size: 50px;
   color: #384259;
   font-family: "Permanent Marker", cursive;
 }
+/* 
+main h1 {
+  font-size: 50px;
+  color: #384259;
+  font-family: "Permanent Marker", cursive;
+} */
 
-button {
+/* button {
   background-color: #8d93ab;
   border: 2px solid #384259;
   padding: 0.1em;
@@ -104,10 +108,10 @@ button:hover, button a:hover {
   background-color: #384259;
   color: #8d93ab;
   transition: background-color 2s ease-out;
-}
+} */
 
 /* footer styling */
-.grid-container footer {
+footer {
   grid-area: footer;
   display: flex;
   justify-content: center;
@@ -115,7 +119,6 @@ button:hover, button a:hover {
 
 footer p {
   padding-top: 10px;
-  color: #f1f3f8;
 }
 
 footer a {
@@ -123,5 +126,5 @@ footer a {
 }
 
 footer a:visited {
-  color: #f1f3f8;
+  color: #384259;
 }
