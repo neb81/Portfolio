@@ -6,11 +6,12 @@
 }
 
 body {
-  background-color: rgba(91, 140, 90, 0.3);
-  /* background-color: #ffe75e; */
-  /* color: #384259; */
-  color: #552244;
+  background-image: linear-gradient(45deg, rgba(91, 140, 90, 0.1), rgba(56, 66, 89, 0.3));
+  background-position: center;
+  background-attachment: fixed;
   height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(56, 66, 89);
   display: grid;
   grid-template-areas:
     "header"
@@ -23,26 +24,26 @@ body {
 /* header styling */
 header {
   grid-area: header;
-  background-color: rgba(91, 140, 90, 0.2);
+  background-image: linear-gradient(45deg, rgba(56, 66, 89, 0.8), rgba(91, 140, 90, 0.9));
   padding: 0.1em 0 1em 0;
   position: sticky;
   top: 0;
-  box-shadow: 0 0 20px 0 rgba(91, 140, 90, 0.5);
+  box-shadow: 0 0 20px 0 rgba(56, 66, 89, 0.3);
 }
 
 nav a {
+  font-size: 20px;
   color: #384259;
-  font-family: "Pacifico", cursive;
-  border: 0.1px solid rgba(91, 140, 90, 0.1);
   padding: 1px 3px;
   margin-bottom: 100px;
 }
 
 nav a:hover {
   color: #393b44;
-  background-color: rgba(91, 140, 90, 0.3);
-  transition: background-color 1s ease-out;
-  box-shadow: 0 0 20px 0 rgba(91, 140, 90, 0.8);
+  background-color: rgba(91, 140, 90, 0.1);
+  transition: box-shadow 1s ease-out;
+  box-shadow: 0 0 20px 0 rgba(56, 66, 89, 0.5);
+  border-radius: 10px;
 }
 
 ul {
@@ -70,11 +71,22 @@ main {
 }
 
 main .card {
-  box-shadow: 0 0 20px 0 rgba(57, 59, 68, 0.4);
-  background-color:  rgba(91, 140, 90, 0.2);
+  background-color:  rgba(91, 140, 90, 0.1);
+  box-shadow: 0 0 20px 0 rgba(56, 66, 89, 0.2);
+  border: 0.1px solid rgba(91, 140, 90, 0);
+  border-radius: 20px;
   padding: 1em;
   height: 400px;
   margin: 5px;
+  text-align: center;
+  line-height: 4em;
+  overflow: auto;
+}
+
+
+main div img {
+  max-width: 100%;
+  border: 1px solid rgba(56, 66, 89, 0.5);
 }
 
 /* footer styling */
@@ -90,6 +102,7 @@ footer p {
 
 footer a {
   text-decoration: none;
+  color: #384259;
 }
 
 footer a:visited {
@@ -103,13 +116,14 @@ footer a:visited {
     grid-template-columns: 1fr 1fr;
   }
 
-  main h1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-
   main .card {
     height: 500px;
+  }
+
+  main h1 {
+    padding: 1em;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
 
@@ -120,11 +134,12 @@ footer a:visited {
   }
 
   main h1 {
+    padding-top: 3em;
     grid-column-start: 1;
     grid-column-end: 5;
   }
 
-  .card {
+  main .card {
     height: 600px;
   }
 }

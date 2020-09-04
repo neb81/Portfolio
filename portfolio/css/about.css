@@ -6,8 +6,11 @@
 }
 
 body {
-  background-color: rgba(91, 140, 90, 0.3);
+  background-image: linear-gradient(45deg, rgba(91, 140, 90, 0.1), rgba(56, 66, 89, 0.3));
+  background-position: center;
+  background-attachment: fixed;
   color: #384259;
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
   display: grid;
   grid-template-areas:
@@ -21,26 +24,27 @@ body {
 /* header styling */
 header {
   grid-area: header;
-  background-color: rgba(91, 140, 90, 0.2);
+  background-image: linear-gradient(45deg, rgba(56, 66, 89, 0.8), rgba(91, 140, 90, 0.9));
   padding: 0.1em 0 1em 0;
   position: sticky;
   top: 0;
-  box-shadow: 0 0 20px 0 rgba(91, 140, 90, 0.5);
+  box-shadow: 0 0 20px 0 rgba(56, 66, 89, 0.3);
 }
 
 nav a {
+  font-size: 20px;
   color: #384259;
-  font-family: "Pacifico", cursive;
-  border: 0.1px solid rgba(91, 140, 90, 0.1);
   padding: 1px 3px;
   margin-bottom: 100px;
+  border: 0.1px solid rgba(91, 140, 90, 0);
+  border-radius: 10px;
 }
 
 nav a:hover {
   color: #393b44;
-  background-color: rgba(91, 140, 90, 0.3);
-  transition: background-color 1s ease-out;
-  box-shadow: 0 0 20px 0 rgba(91, 140, 90, 0.8);
+  background-color: rgba(91, 140, 90, 0.1);
+  transition: box-shadow 1s ease-out;
+  box-shadow: 0 0 20px 0 rgba(56, 66, 89, 0.5);
 }
 
 ul {
@@ -57,6 +61,7 @@ ul {
 /* main section styling */
 main h1 {
   text-align: center;
+  padding: 1em 0em;
 }
 
 main {
@@ -68,13 +73,33 @@ main {
 }
 
 main .card {
-  box-shadow: 0 0 20px 0 rgba(57, 59, 68, 0.4);
-  background-color:  rgba(91, 140, 90, 0.2);
+  background-color:  rgba(91, 140, 90, 0.1);
+  box-shadow: 0 0 20px 0 rgba(56, 66, 89, 0.3);
+  border: 0.1px solid rgba(91, 140, 90, 0);
+  border-radius: 20px;
   padding: 1em;
-  height: 400px;
+  height: 500px;
   margin: 5px;
+  text-align: center;
+  line-height: 3em;
+  overflow: auto;
 }
 
+.card .fab, .fas {
+  text-align: center;
+  font-size: 60px;
+  color: #384259;
+  padding-top: 40px;
+}
+
+main div img {
+  max-width: 100%;
+  border: 1px solid rgba(56, 66, 89, 0.5);
+}
+
+#video-game {
+max-width: 100%;
+}
 /* footer styling */
 footer {
   grid-area: footer;
@@ -88,6 +113,7 @@ footer p {
 
 footer a {
   text-decoration: none;
+  color: #384259;
 }
 
 footer a:visited {
@@ -101,7 +127,17 @@ footer a:visited {
     grid-template-columns: 1fr 1fr;
   }
 
+  main .card3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  #video-game {
+    max-width: 52%;
+    }
+
   main h1 {
+    padding: 1em;
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -109,11 +145,16 @@ footer a:visited {
 
 /* large screens  */
 @media(min-width:1024px){
- main {
+ main .card{
   grid-template-columns: repeat(3, 1fr);
 }
 
+#video-game {
+  max-width: 38%;
+  }
+
 main h1 {
+  padding-top: 3em;
   grid-column-start: 1;
   grid-column-end: 4;
 }

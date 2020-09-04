@@ -6,40 +6,45 @@
 }
 
 body {
-  background-color: rgba(91, 140, 90, 0.3);
+  background-image: linear-gradient(45deg, rgba(91, 140, 90, 0.1), rgba(56, 66, 89, 0.3));
+  background-position: center;
+  background-attachment: fixed;
   color: #384259;
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
   display: grid;
   grid-template-areas:
     "header"
-    "grid-container"
+    "main"
     "footer";
   grid-template-rows: 60px 1fr 30px;
-  /* grid-template-columns: 100%; */
+  grid-template-columns: 100%;
 }
+
 /* header styling */
 header {
   grid-area: header;
-  background-color: rgba(91, 140, 90, 0.2);
+  background-image: linear-gradient(45deg, rgba(56, 66, 89, 0.8), rgba(91, 140, 90, 0.9));
   padding: 0.1em 0 1em 0;
   position: sticky;
   top: 0;
-  box-shadow: 0 0 20px 0 rgba(91, 140, 90, 0.5);
+  box-shadow: 0 0 20px 0 rgba(56, 66, 89, 0.3);
 }
 
 nav a {
+  font-size: 20px;
   color: #384259;
-  font-family: "Pacifico", cursive;
-  border: 0.1px solid rgba(91, 140, 90, 0.1);
   padding: 1px 3px;
   margin-bottom: 100px;
+  border: 0.1px solid rgba(91, 140, 90, 0);
+  border-radius: 10px;
 }
 
 nav a:hover {
-  color: #393b44;
-  background-color: rgba(91, 140, 90, 0.3);
-  transition: background-color 1s ease-out;
-  box-shadow: 0 0 20px 0 rgba(91, 140, 90, 0.8);
+  color: rgb(57, 59, 68);
+  background-color: rgba(91, 140, 90, 0.1);
+  transition: box-shadow 1s ease-out;
+  box-shadow: 0 0 20px 0 rgba(56, 66, 89, 0.5);
 }
 
 ul {
@@ -53,23 +58,17 @@ ul {
   text-decoration: none;
 }
 
-/* container styling */
-.grid-container {
-  grid-area: grid-container;
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
+/* logo styling */
+main div {
+  text-align: center;
 }
 
-/* logo styling */
 .profile {
-  height: 70px;
+  height: 150px;
+  width: 150px;
 }
 
 /* main section styling */
-main h1 {
-  text-align: center;
-}
 
 main {
   grid-area: main;
@@ -79,24 +78,28 @@ main {
   justify-content: space-evenly;
 }
 
-main h1, h2, h3,
+main h1,
+h2,
+h3,
 button {
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: #384259;
-  font-family: "Permanent Marker", cursive;
+  
 }
-/* 
-main h1 {
-  font-size: 50px;
-  color: #384259;
-  font-family: "Permanent Marker", cursive;
-} */
 
-/* button {
-  background-color: #8d93ab;
-  border: 2px solid #384259;
-  padding: 0.1em;
+main h1 {
+  font-size: 60px;
+  color: #384259;
+  font-family: 'Pacifico', cursive;
+}
+
+button {
+  background-color: rgba(91, 140, 90, 0.1);
+  border: 0.1px solid rgba(91, 140, 90, 0);
+  border-radius: 25px;
+  padding: 0.1em 0.2em;
+  box-shadow: 0 0 20px 0 rgba(56, 66, 89, 0.3);
 }
 
 button a {
@@ -104,11 +107,12 @@ button a {
   color: #384259;
 }
 
-button:hover, button a:hover {
-  background-color: #384259;
-  color: #8d93ab;
-  transition: background-color 2s ease-out;
-} */
+button:hover {
+  background-color: rgba(91, 140, 90, 0.1);
+  box-shadow: 0 0 20px 0 rgba(56, 66, 89, 0.9);
+  color: #384259;
+  transition: box-shadow 1s ease-out;
+}
 
 /* footer styling */
 footer {
@@ -123,6 +127,7 @@ footer p {
 
 footer a {
   text-decoration: none;
+  color: #384259;
 }
 
 footer a:visited {
